@@ -1,0 +1,299 @@
+.c-colors {
+    @extend %rel;
+    max-width: $design + px;
+    
+    @media ( min-width: $tablet_portrait + 1px ) and ( max-width: $desktop + px ) {
+    	height: desktop(960);
+    }
+    
+    @media ( min-width: $tablet_portrait + 1px ) {
+        height: 960px;
+        min-height: 768px;
+    }
+    
+    p {
+        font-weight: $regular;
+    }
+
+    &__caption {
+        transition: all .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        
+        h3 {
+           @extend %lead--2;
+           @extend %rel;
+           margin-bottom: 20px;
+           padding-bottom: .3em;
+           
+           @media ( max-width: $tablet_portrait + px ) {
+                font-size: rem(24);
+           }
+           
+           &:after {
+               @extend %abs;
+               @extend %abs-pseudo;
+               left: 0; top: 100%;
+               width: 100%;
+               height: 1px;
+               transform-origin: left;
+               transition: all .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+           }
+       } 
+       
+       p {
+           max-width: 400px;
+           padding-right: 20px;
+       }
+    }
+    
+    &__content {
+        @extend %flex;
+        @extend %flex-wrap;
+        @extend %flex-column;
+        @extend %rel;
+        
+        @media ( min-width: $tablet_portrait + 1px ) {
+            height: 100%;
+        }
+                
+        &.index-up {
+            .c-colors__col--white {
+                z-index: 2;
+            }
+        }
+        
+        @media ( min-width: $tablet + 1px ) {
+        	&.black-active {
+                .fade-in & {
+                    .c-colors__col {
+                        &--black {
+                            &:before {
+                                transform: scaleX(3);
+                            }
+                            
+                            h3, p {
+                                padding-left: 0;
+                            }
+                            
+                            h3 {
+                                &:after {
+                                    transform: scaleX(3);
+                                }
+                            }
+                            
+                            .c-colors__caption {
+                                transform: translateX(-100%) translateX(140px);
+                            }
+                        }   
+                        
+                        &--white {
+                            transition: all .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                            transform: translateX(-100%);
+                        }         
+                    }
+                
+                    .o-header {
+                        color: white;
+                    }
+                }
+            }
+            
+            &.white-active {
+                .fade-in & {
+                    .c-colors__col {
+                        &--white {
+                            &:before {
+                                transform: scaleX(3);
+                            }
+                        
+                            h3 {                        
+                                &:after {
+                                    transform: scaleX(3);
+                                }
+                            }
+                        }
+                        
+                        &--black {
+                            transition: all .5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                            transform: translateX(100%);
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+    &__col {
+        @extend %rel;
+        flex-shrink: 0;
+        width: 50%;
+        //transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        
+        &:before {
+            @extend %abs;
+            @extend %abs-pseudo; z-index: -1;
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            top: 0;
+            width: 100%; height: 100%;
+        }
+        
+        &--white {
+            background-color: $c-gray-03;
+            padding-left: 140px;
+            
+            @media ( max-width: $tablet_portrait + px ) {
+            	padding-left: grid(140, $tablet);
+            }
+
+            &:before {
+                left: 0;
+                width: 100%; height: 100%;
+                background-color: $c-gray-03;
+            }
+            
+            h3 {                
+                &:after {
+                    background-color: $c-gray-06;
+                }
+            }            
+        }
+        
+        &--black {
+            background-color: $c-gray-04;
+            color: white;
+            
+            @media ( max-width: $smartphone + px ) {
+            	padding-left: grid(140, $tablet);
+            }
+            
+            &:before {
+                right: 0;
+                width: 100%; height: 100%;
+                background-color: $c-gray-04;
+            }
+            
+            h3 {
+                //border-color: white;
+   
+                &:after {
+                    background-color: white;
+                }
+            }
+            
+            h3, p {
+                padding-left: 70px;
+                
+                @media ( max-width: $tablet + px ) {
+                	padding-left: 35px;
+                }
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                	padding-left: 25px;
+                }
+                
+                @media ( max-width: $smartphone + px ) {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+    
+    &__image {
+        width: 1210px;
+        pointer-events: none;
+        
+        @media ( min-width: $tablet_portrait + 1px ) {
+        	position: absolute; z-index: 5;
+        	top: 50%;
+        	left: 50%;
+        	transform: translate(-50%, -50%);
+        }
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	width: 100%;
+        	padding-left: grid(140, $tablet);
+        	padding-right: grid(70);
+        	margin-bottom: 20px;
+        }
+        
+        @media ( min-width: $tablet_portrait + 1px ) and ( max-width: $design + px ) {
+        	width: grid(1210, $design);
+        }
+    }
+    
+    &__row {
+        @extend %flex;
+        width: 100%;
+        overflow: hidden;
+        
+        &:first-of-type {
+            flex: 1;
+        }
+        
+        &--captions {
+            margin-top: -1px;
+            
+            @media ( max-width: $smartphone + px ) {
+            	display: block;
+            }
+
+            .c-colors__col {
+                padding-bottom: 60px;
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                	padding-top: 40px;
+                }
+                
+                @media ( max-width: $smartphone + px ) {
+                    width: 100%;
+                    padding-bottom: 50px;
+                    padding-top: 30px;
+                }
+            }
+        }
+    }
+    
+    .o-header {
+        transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        
+        @media ( min-width: $tablet_portrait + 1px ) {
+            position: absolute; z-index: 5;
+            left: 140px; top: 70px;
+            max-width: 320px;
+        }
+        
+        @media ( max-width: $base + px ) {
+        	top: base(70);
+        }
+        
+        @media ( max-width: $tablet + px ) {
+        	top: 60px;
+        }
+        
+        @media ( max-width: $tablet_portrait + px ) {
+            max-width: 500px;
+            padding-left: grid(140, $tablet);
+            padding-right: grid(70);
+            margin-bottom: 40px;
+        }
+    }
+
+    .o-cols {
+
+        &__item {
+            @extend %abs;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            cursor: pointer;
+
+            &--left {
+                left: 0;
+            }
+            
+            &--right {
+                right: 0;
+            }
+        }
+    }
+}

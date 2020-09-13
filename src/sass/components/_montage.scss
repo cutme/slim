@@ -1,0 +1,102 @@
+.c-montage {
+    @extend %flex;
+    max-width: $design + px;
+    overflow: hidden;
+    margin-bottom: 120px;
+    padding-left: 0;
+    
+    @media ( max-width: $design + px ) {
+    	margin-bottom: design(120);
+    }   
+
+    @media ( min-width: $tablet + 1px ) {
+    	min-height: 800px;
+    	height: 100vh;
+    }
+    
+    @media ( max-width: $tablet_portrait + px ) {
+    	flex-direction: column-reverse;
+    }
+
+    &__caption {
+        width: 630px;
+        background-color: $c-gray-04;
+        padding: 80px grid(50) 40px 140px;
+        color: white;
+        
+        @media ( max-width: $base + px ) {
+        	padding-top: base(80);
+        }
+        
+        @media ( max-width: $tablet + px ) {
+        	width: 100%;
+        }
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	padding-left: grid(140, $tablet);
+        }
+    }
+    
+    &__images {        
+
+        @media ( min-width: $tablet_portrait + 1px ) {
+            width: 1150px;
+        }
+        
+        li {
+            height: 100%;
+            
+            &:last-child {
+                img {
+                    object-position: right;
+                }
+            }
+        }
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .o-gallery {
+            height: 100%;
+        }
+    }
+    
+    .o-accordion {
+        li {
+            border-bottom-color: $c-gray-05;
+            padding-top: 20px;
+            padding-right: 40px;
+            
+            @media ( max-width: $base + px ) {
+            	padding-top: base(20);
+            }
+
+            &:after {
+                bottom: 20px;
+                font-size: rem(24);
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                    bottom: 10px;
+                	font-size: rem(20);
+                }
+            }
+        }
+    }
+    
+    .o-header {
+        margin-bottom: 40px;
+    }
+    
+    .o-lead {
+        &--3 {
+            padding-bottom: 20px;
+            
+            @media ( max-width: $tablet_portrait + px ) {
+            	font-size: rem(20);
+            }
+        }
+    }
+}

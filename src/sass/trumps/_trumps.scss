@@ -1,0 +1,48 @@
+
+
+.is-hidden {
+    display: none;
+}
+
+.invisible {
+    visibility: hidden;
+    
+    &.is-active {
+        visibility: visible;
+    }
+}
+
+.is-primary {
+    z-index: 10 !important;
+}
+
+.is-secondary {
+    z-index: 5 !important;
+}
+
+
+// Text
+
+.aligncenter {
+    text-align: center;
+}
+
+.color-primary {
+    color: var(--primary-color);
+}
+
+.u-cover {
+    transition: all 500ms ease-out;
+    opacity: 1;
+    
+    .is-loaded & {
+        opacity: 0;
+    }
+}
+
+
+// Backgrounds
+
+.bg-gray {
+}
+

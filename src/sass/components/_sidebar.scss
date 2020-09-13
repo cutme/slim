@@ -1,0 +1,12 @@
+.c-sidebar {
+    @include z-index(sidebar);
+    position: fixed;
+    left: 0; top: 0;
+    width: 110px; height: 100%;
+    border-right: 1px solid $c-gray-01;
+    opacity: .5;
+    
+    @media ( max-width: $tablet + px ) {
+    	width: grid(110, $tablet);
+    }
+}

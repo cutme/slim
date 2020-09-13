@@ -1,0 +1,47 @@
+// Fonts
+
+$aktiv:             'AktivGrotesk', sans-serif;
+$icomoon:           'icomoon';
+$text:		        $aktiv;
+
+
+
+
+// Font weights
+
+$extralight:        200;
+$light:             300;
+$regular:           400;
+$medium:            500;
+$semibold:          600;
+$bold:              700;
+$extrabold:         800;
+
+
+$z-index: (
+	top:             40,
+	sidebar:        100
+);
+
+// Paths
+
+$path_img:          '../img';
+$path_fonts:        '../fonts';
+
+
+
+// Default
+
+$base-font-size:	16;
+$base:				1640;
+
+
+
+// RWD
+
+$design:               1920;
+$desktop:              1240;
+$tablet:               1024;
+$tablet_portrait:       768;
+$smartphone:			640;
+$smartphone_portrait:	500;

@@ -1,0 +1,95 @@
+.c-download {
+    @extend %wrap;
+    padding: {
+        top: 160px;
+        bottom: 100px;
+    }
+    
+    @media ( max-width: $design + px ) {
+    	padding: {
+        	top: design(160);
+        	bottom: design(160);
+    	}
+    }
+    
+    ul {
+        @extend %flex;
+        
+        a {
+            @extend %flex;
+            @extend %flex-y;
+            
+            @media ( max-width: $desktop + px ) {
+            	flex-wrap: wrap;
+            	text-align: center;
+            }
+            
+            &:hover {
+                .desktop & {
+                    [class^="icon-"] {
+                        background-color: $c-black-01;
+                        color: white;
+                    }
+                }
+            }
+        }
+        
+        li {
+            width: calc(100% / 3);
+        	
+        }
+        
+        span {
+            @extend %lead--2;
+            
+            @media ( max-width: $desktop + px ) {
+                display: block;
+                width: 100%;
+            }
+            
+            @media ( max-width: $tablet_portrait + px ) {
+            	font-size: rem(18);
+            }
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+            	font-size: rem(16);
+            }
+        }
+    }
+    
+    [class^="icon-"] {
+        @extend %anim;
+        @extend %flex;
+        @extend %flex-xy;
+        flex-shrink: 0;
+        width: 60px; height: 60px;
+        border: 1px solid $c-black-01;
+        border-radius: 50%;
+        margin-right: 30px;
+        line-height: 1;
+        font-size: rem(32);
+        
+    	@media ( max-width: $desktop + px ) {
+            margin: 0 auto 20px auto;
+    	}
+    }
+    
+    .o-header {
+        max-width: 420px;
+        margin-bottom: 200px;
+        
+        @media ( max-width: $design + px ) {
+            margin-bottom: design(200);
+        }
+        
+        @media ( max-width: $desktop + px ) {
+            max-width: 400px;
+            margin: 0 auto 60px auto;
+            text-align: center;
+        }
+        
+        @media ( max-width: $tablet + px ) {
+            max-width: 320px;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.o-gallery {
+    @extend %rel;
+    //flex: 1;
+    overflow: hidden;
+    
+    li {
+        @extend %rel;
+    
+        &:not(.is-primary) {
+            @extend %abs;
+            left: 0; top: 0;
+        }
+        
+        &:nth-child(3) {
+            z-index: 1;
+        }
+        
+        &:nth-child(2) {
+            z-index: 2;
+        }
+        
+        &:nth-child(1) {
+            z-index: 3;
+        }
+    }
+}

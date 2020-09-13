@@ -1,0 +1,107 @@
+.c-footer {
+    background-color: $c-gray-04;
+    
+    &__contact {
+        @extend %wrap;
+        @extend %flex;
+        padding: {
+            top: 70px;
+            bottom: 70px;
+        }
+        color: white;
+
+        @media ( max-width: $tablet + px ) {
+            align-items: center;
+        }
+        
+        @media ( max-width: $smartphone + px ) {
+            flex-direction: column;
+            padding-bottom: 50px;
+            padding-top: 50px;
+        }
+
+        h3 {
+            @extend %lead--2;
+            max-width: 560px;
+
+            @media ( min-width: $smartphone + 1px ) and ( max-width: $base + px ) {
+            	width: base(560);
+            }
+            
+            @media ( max-width: $smartphone + px ) {
+            	margin-bottom: 40px;
+            	text-align: center;
+            }            
+        }
+        
+        .o-btn {
+            //max-width: 300px;
+
+            @media ( min-width: $smartphone + 1px ) {
+	            margin: 0 0 0 auto;
+            }
+        }
+    }
+    
+    &__copyrights {
+        @extend %flex;
+        @extend %flex-spacebetween;
+        @extend %wrap;
+        padding-bottom: 60px;
+        color: $c-gray-07;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+    	    flex-direction: column-reverse;
+            align-items: center;
+        }
+        
+        p {
+            @extend %flex;
+            align-items: flex-end;
+            font: {
+                size: rem(14);
+                weight: $regular;
+            }
+            
+            &:last-of-type {
+                @media ( max-width: $tablet_portrait + px ) {
+                	margin-bottom: 20px;
+                }
+                
+                @media ( max-width: $smartphone + px ) {
+                    display: block;
+                	
+                }
+            }
+            
+            a {
+                @extend %ulink;
+                text-transform: uppercase;
+                
+                &:before, &:after {
+                    background-color: $c-gray-07;
+                }
+            }
+        }
+    }
+    
+    .o-logo {
+        margin: 0 auto 20px auto;
+        
+        @media ( max-width: $desktop + px ) {
+        	width: desktop(284);
+        }
+        
+        @media ( min-width: $tablet + 1px ) {
+            margin-bottom: -8px;
+        }
+        
+        @media ( min-width: $smartphone + 1px ) {
+            margin: 0 20px;
+        }
+        
+        @media ( max-width: $smartphone + px ) {
+        	width: 146px;
+        }
+    }
+}

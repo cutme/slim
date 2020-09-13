@@ -1,0 +1,112 @@
+.c-noise {
+    @extend %rel;
+    overflow: hidden;
+    
+    &__details {
+        @extend %abs;
+        width: 100%; height: 100%;
+        padding: 70px 140px 70px 140px;
+        
+        @media ( max-width: $tablet + px ) {
+        	padding-left: grid(140, $tablet);
+        	padding-right: grid(70);
+        }
+        
+        ul {
+            @extend %flex;
+            @extend %flex-wrap;
+            width: 100%;
+        }
+
+        li {
+            width: 50%;
+            padding: 40px 0;
+            
+            &:nth-of-type(even) {
+                margin: 0 0 0 auto;
+                text-align: right;
+                
+                article {
+                    margin: 0 0 0 auto;
+
+                    &:after {
+                        left: 0;
+                    }
+                }
+            }
+            
+            &:nth-of-type(odd) {
+                article {
+                    &:after {
+                        right: 0;
+                    }
+                }
+            }
+            
+            article {
+                @extend %rel;
+                width: 320px;
+                
+                &:after {
+                    @extend %abs;
+                    @extend %abs-y;
+                    @extend %abs-pseudo;
+                    width: 100px; height: 1px;
+                    background-color: $c-gray-06;
+                }
+            }
+            
+            p {
+                &.o-lead {
+                    &--1 {
+                        @media ( max-width: $design + px ) {
+                        	font-size: design(65);
+                        }
+                        
+                        @media ( max-width: $design + px ) {
+                        }
+                    }
+                }
+            }
+            
+            .o-lead--1 {
+                line-height: 1.2em;
+            }
+        }
+    }
+    
+    .o-header {
+        max-width: 320px;
+        
+        @media ( max-width: $base + px ) {
+        	top: base(70);
+        }
+        
+        @media ( max-width: $desktop + px ) {
+        	max-width: 500px;
+        }
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	padding-top: 45px;
+        }
+    }
+
+    //margin-bottom: 120px;
+    
+    svg {
+        //position: absolute;
+        //width: 100%; height: 100%;
+        //left: 0; top: 0;
+        
+        //width: 100%;
+        //-webkit-backface-visibility: hidden;
+        //-moz-backface-visibility: hidden;
+        //-webkit-transform: translate3d(0, 0, 0);
+       // -moz-transform: translate3d(0, 0, 0);
+        //width: 100%; height: 100%;
+        
+    }
+}
+
+
+

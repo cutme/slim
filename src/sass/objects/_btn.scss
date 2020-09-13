@@ -1,0 +1,42 @@
+.o-btn {
+    @extend %anim;
+    display: inline-flex;
+    @extend %flex-xy;
+    @extend %rel;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-family: $text;
+    cursor: pointer;
+   
+    &--major {
+        height: 75px;
+        background-color: transparent;
+        border: 1.5px solid white;
+        border-radius: 4px;
+        padding: 0 100px;
+        font: {
+            size: rem(24);
+        }
+        
+        @media ( max-width: $tablet + px ) {
+        	padding: 0 tablet(100);
+        }
+        
+        @media ( max-width: $smartphone + px ) {
+            height: 60px;
+            font-size: rem(20);
+        }
+
+        
+        &:hover {
+            .desktop & {
+                background-color: white;
+                color: $c-gray-04;
+            }
+        }
+    } 
+
+    span {
+        width: 100%;
+	}
+}

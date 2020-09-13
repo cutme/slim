@@ -1,0 +1,80 @@
+
+        <div class="c-gallery js-gallery">
+            
+            <div class="c-gallery__big">
+                <ul class="o-gallery js-big">
+                    <li class="is-active is-primary">
+                        <img src=<%= require("./img/photos/gallery/01.jpg") %> alt="" width="830" height="780">
+                    </li>
+                    
+                    <li class="invisible">
+                        <img src=<%= require("./img/photos/gallery/02.jpg") %> alt="" width="830" height="780">
+                    </li>
+                    
+                    <li class="invisible">
+                        <img src=<%= require("./img/photos/gallery/03.jpg") %> alt="" width="830" height="780">
+                    </li>
+                </ul>
+                
+                <div class="c-gallery__caption">
+                    <ul class="js-captions">
+                        <li class="is-active js-fadeInChildren">
+                            <h3>Plug &&nbsp;Play</h3>
+                            <p>Kurtyna posiada wbudowane sterowanie umożliwiające automatyczną pracę względem sygnału z czujnika ruchu. Dzięki temu urządzenie wie, kiedy pracować.</p>
+                        </li>
+                        
+                        <li>
+                            <h3>Sensor PIR</h3>
+                            <p>Kurtyna posiada wbudowane sterowanie umożliwiające automatyczną pracę względem sygnału z czujnika ruchu. Dzięki temu urządzenie wie, kiedy pracować.</p>
+                        </li>
+                        
+                        <li>
+                            <h3>Łatwy serwis</h3>
+                            <p>Kurtyna posiada wbudowane sterowanie umożliwiające automatyczną pracę względem sygnału z czujnika ruchu. Dzięki temu urządzenie wie, kiedy pracować.</p>
+                        </li>
+                    </ul>
+                    
+                    <div class="c-gallery__pagination">
+                        <span class="icon-arrow prev js-prev"></span>
+                        <span class="info js-status"><span class="js-current">1</span> / 3</span>
+                        <span class="icon-arrow next js-next"></span>
+                    </div>
+                </div>
+                
+            </div>                
+            
+            <div class="c-gallery__small">
+                <ul class="o-gallery js-thumbs">
+                    <li data-f=1 class="is-active is-primary">
+                        <img  src=<%= require("./img/photos/gallery/02-small.jpg") %> alt="" >
+                    </li>
+                    
+                    <li data-f=2 class="invisible">
+                        <img src=<%= require("./img/photos/gallery/03-small.jpg") %> alt="" >
+                    </li>
+                    
+                    <li data-f=3 class="invisible">
+                        <img src=<%= require("./img/photos/gallery/01-small.jpg") %> alt="" >
+                    </li>
+                </ul>
+                
+                <nav class="c-gallery__nav">
+                    <ul>
+                        <li class="js-btn is-active">
+                            <i class="icon-plug"></i>
+                            <span>Plug &amp; Play</span>
+                        </li>
+                        
+                        <li class="js-btn">
+                            <i class="icon-pir"></i>
+                            <span>Sensor PIR</span>
+                        </li>
+                        
+                        <li class="js-btn">
+                            <i class="icon-service"></i>
+                            <span>Łatwy servis</span>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>

@@ -1,0 +1,51 @@
+.c-quality {
+   // @extend %flex;
+    @extend %rel;
+    max-width: $design;
+    //height: 100vh;
+    padding: 180px 0 60px 140px;
+    
+    @media ( max-width: $design + px ) {
+        padding: design(180) 0 design(60) 140px;
+    }
+    
+    @media ( min-width: $tablet + 1px ) {
+        display: flex;
+    }
+    
+    @media ( max-width: $tablet + px ) {
+        padding-left: grid(140, $tablet) !important;
+        padding-right: grid(70, $tablet) !important;
+    }
+    
+    @media ( max-width: $tablet_portrait + px ) {
+        padding: {
+        	top: 60px;
+        	bottom: 60px;
+    	}
+    }
+    
+    &__image {
+        width: 1376px;
+        
+        canvas {
+            width: 100%;
+        }
+        
+        @media ( max-width: $tablet + px ) {
+        	max-width: 100%;
+        	margin: 0 auto;
+        }
+    }
+    
+    .o-header {
+        width: 410px;
+        
+        @media ( max-width: $tablet + px ) {
+            width: 100%;
+            padding-right: grid(70);
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+}

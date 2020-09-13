@@ -1,0 +1,264 @@
+.c-gallery {
+    @extend %flex;
+    max-width: $design + px;
+    
+    @media ( max-width: $tablet_portrait + px ) {
+        flex-wrap: wrap;
+    }
+    
+    &__big {
+        @extend %rel;
+        width: grid(1370, $design);
+        
+        @media ( max-width: $tablet + px ) {
+        	width: grid(1250, $design);
+        }
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	width: 100%;
+        }
+        
+        @media ( min-width: $smartphone + 1px ) {
+        	display: flex;
+        }
+        
+        .o-gallery {
+            width: grid(830, 1370);
+            margin: 0 0 0 auto;
+            
+            @media ( max-width: $tablet + px ) {
+            	width: 100%;
+            	width: auto;
+            	margin: 0;
+//            	margin-left: grid(110, 666.66);
+            }
+            
+            @media ( max-width: $tablet_portrait + px ) {
+  //              margin-left: grid(110, $tablet);
+            }
+        }
+    }
+    
+    &__caption {
+        @extend %flex;
+        @extend %flex-column;
+        @extend %flex-spacebetween;
+        width: grid(540, 1370); height: 100%;
+        background-color: $c-gray-03;
+        padding: 90px grid(90) 80px 140px;
+        
+        @media ( min-width: $smartphone + 1px ) {
+            position: absolute;
+            left: 0; top: 0;
+            z-index: 5;
+        }
+        
+        @media ( max-width: $design + px ) {
+        	padding: design(90) grid(90) design(80) 140px;
+        }
+        
+        @media ( max-width: $tablet + px ) {
+            top: auto;
+            bottom: 0;
+            opacity: .9;
+            width: 100%; height: auto;
+            padding: 25px 30px 25px grid(140, 730.66);
+        }
+        
+        @media ( max-width: $tablet_portrait + px ) {
+            padding: 15px 30px 20px grid(140, $tablet);
+        }
+        
+        @media ( max-width: $smartphone + px ) {
+        	opacity: 1;
+        }
+        
+        h3 {
+            @extend %lead--2;
+            margin-bottom: .6em;
+        }
+        
+        p {
+            font-weight: $regular;
+            
+            @media ( max-width: $desktop + px ) {
+            	font-size: rem(14);
+            }
+        }
+        
+        li {
+            display: none;
+
+            &.is-active {
+                display: block;
+            }
+        }
+    }
+    
+    &__nav {
+        @extend %flex;
+        @extend %flex-y;
+        flex: 1;
+        height: 100%;
+        padding: 0 0 0 40px;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	padding: 40px 40px 40px 0;
+        }
+        
+        ul {
+            @media ( max-width: $tablet_portrait + px ) {
+                display: flex;
+                width: 100%;
+            }
+            
+            @media ( max-width: $smartphone + px ) {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        li {
+            @extend %flex;
+            @extend %flex-y;
+            cursor: pointer;
+
+            &:not(:last-child) {
+                margin-bottom: 40px;
+                
+                @media ( min-width: $tablet_portrait + 1px ) and ( max-width: $design + px ) {
+                	margin-bottom: design(40);
+                }
+                
+                @media ( max-width: $tablet_portrait + px ) {
+//                    width: calc(100% / 3);
+                	margin-bottom: 0;
+                }
+            }
+            
+            @media ( max-width: $tablet_portrait + px ) {
+                width: 33.33%;
+            }
+            
+            @media ( max-width: $smartphone + px ) {
+            	flex-direction: column;
+            	//width: 50%;
+
+            	&:not(:last-child) {
+                }
+            }
+            
+            
+            &.is-active {}
+        }
+
+        span {
+            @extend %lead--3;
+            
+            @media ( max-width: $base + px ) {
+            	font-size: base(24);
+            }
+            
+            @media ( max-width: $desktop + px ) {
+            	font-size: rem(18);
+            }
+        }
+        
+        [class^="icon-"] {
+            margin-right: 30px;
+            line-height: 1;
+            font-size: rem(56);
+            
+            @media ( max-width: $design + px ) {
+                margin-right: design(30);
+            	font-size: design(56);
+            }
+            
+            @media ( max-width: $desktop + px ) {
+                margin-right: 20px;
+            	font-size: rem(36);
+            }
+            
+            @media ( max-width: $smartphone + px ) {
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+        }
+    }
+    
+    &__pagination {
+        @extend %flex;
+        @extend %flex-y;
+        @extend %flex-spacebetween;
+        max-width: 280px;
+        
+        @media ( max-width: $tablet + px ) {
+        	position: absolute;
+        	right: 20px;
+        	width: 100px;
+        }
+
+        [class^="icon-"] {
+            display: inline-block;
+            font-size: rem(30);
+            cursor: pointer;
+            
+            @media ( max-width: $base + px ) {
+            	font-size: base(30);
+            }
+            
+            @media ( max-width: $tablet + px ) {
+            	font-size: rem(18);
+            }
+        }
+        
+        .prev {
+            transform: rotate(90deg);
+        }
+        
+        .next {
+            transform: rotate(-90deg);
+        }
+        
+        .info {
+            @extend %lead--3;
+
+            @media ( max-width: $base + px ) {
+                font-size: base(24);
+            }
+
+            @media ( max-width: $tablet + px ) {
+            	font-size: rem(16);
+            }
+        }
+    }
+    
+    &__small {
+        @extend %flex;
+        @extend %flex-column;
+        margin: 0 0 0 auto;
+        
+        @media ( min-width: $tablet_portrait + 1px ) {
+        	width: grid(520, $design);
+        }
+        
+        @media ( max-width: $tablet + px ) {
+        	width: grid(650, $design);
+        }
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	width: 100%;
+        	padding-left: grid(140, $tablet);
+        }
+        
+        img {
+            align-self: baseline;
+        }
+        
+        .o-gallery {
+            @media ( max-width: $tablet_portrait + px ) {
+            	display: none;
+            }
+        }
+    }
+}

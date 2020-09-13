@@ -1,0 +1,44 @@
+.c-top {
+    @include z-index(top);
+    height: 175px;
+    background-color: white;
+    
+    @media ( max-width: $base + px ) {
+    	height: base(175);
+    }
+    
+    @media ( max-width: $tablet + px ) {
+    	height: 100px;
+    }
+    
+    .o-logo {
+        display: block;
+
+        &--flowair {
+            @media ( max-width: $base + px ) {
+            	width: base(276);
+            }
+            
+            @media ( max-width: $tablet + px ) {
+            	width: 172.33px;
+            }
+        }
+        
+        &--slim {
+            @media ( max-width: $base + px ) {
+            	width: base(138);
+            }
+            
+            @media ( max-width: $tablet + px ) {
+            	width: 88.16px;
+            }
+        }
+    }
+    
+    .o-wrap {
+        @extend %flex;
+        @extend %flex-y;
+        @extend %flex-spacebetween;
+        height: 100%;
+    }
+}

@@ -1,0 +1,40 @@
+.o-accordion {
+    
+    li {
+        @extend %rel;
+        cursor: pointer;
+        border-bottom: 1px solid transparent;
+        
+        &:after {
+            @extend %abs;
+            @extend %anim;
+            right: 0; 
+            font-family: $icomoon;
+            content: "\e906";
+        }
+        
+        section {
+            height: 0;
+            overflow: hidden;
+        }
+        
+        &.is-rollout {
+            &:after {
+                opacity: 1;
+                transform: scaleY(-1);
+            }
+            
+            .o-lead {
+                &--2 {
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+
+    p {
+        padding-bottom: 40px;
+        font-weight: $regular;
+    }
+}
+

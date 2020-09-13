@@ -1,0 +1,145 @@
+.c-curtains {
+    @extend %wrap;
+    @extend %rel;
+    background-color: $c-gray-03;
+    padding: {
+        top: 100px;
+        bottom: 140px;
+    }
+    
+    @media ( max-width: $design + px ) {
+    	padding: {
+        	top: design(100);
+        	bottom: design(140);
+    	}
+    }
+    
+    @media ( max-width: $tablet_portrait + px ) {
+        padding: {
+        	top: 60px;
+        	bottom: 60px;
+    	}
+    }
+    
+    & > .o-header {
+        width: 1080px;
+        margin: 0 auto 50px auto;
+        text-align: center;
+        
+        @media ( max-width: $base + px ) {
+        	width: base(1080);
+        }
+    }
+    
+    ul {
+        @extend %flex;
+        @extend %flex-x;
+        
+        @media ( max-width: $smartphone + px ) {
+            flex-wrap: wrap;
+        }
+        
+        h4 {
+            @extend %lead--2;
+            margin-bottom: .5em;
+        }
+        
+        p {
+            @extend %lead--3;            
+        }
+        
+        li {
+            width: calc(100% / 3);
+            text-align: center;
+            
+            @media ( max-width: $smartphone + px ) {
+            	width: 50%;
+                margin-bottom: 20px;
+            }
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+            
+            article {
+                padding: 0 10px;
+            }
+            
+            &:not(:last-child) {
+                article {
+                    border-right: 1px solid $c-black-01;
+                    
+                    @media ( max-width: $smartphone_portrait + px ) {
+                        border: none;
+                    }
+                }                
+            }
+
+            &:nth-of-type(2) {
+                article {
+                    @media ( max-width: $smartphone + px ) {
+                        border-right: none;
+                    }
+                }
+            }
+        }
+        
+        [class^="icon-"] {
+            @extend %flex;
+            @extend %flex-xy;
+            width: 428px; 
+            height: 428px;
+            background-color: white;
+            border-radius: 50%;
+            margin: 0 auto 60px auto;
+            line-height: 1;
+            
+            @media ( max-width: $design + px ) {
+                width: design(428);
+                height: design(428);
+                margin-bottom: design(60);
+            }
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+                width: 200px; height: 200px;
+            }
+        }
+        
+        .icon-width {
+            font-size: rem(276);
+            
+            @media ( max-width: $design + px ) {
+                font-size: design(276);
+            }
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+                font-size: rem(120);
+            }
+        }
+        
+        .icon-versions {
+            font-size: rem(76);
+            
+            @media ( max-width: $design + px ) {
+                font-size: design(76);
+            }
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+                font-size: rem(36);
+            }
+        }
+        
+        .icon-montage {
+            font-size: rem(230);
+            
+            @media ( max-width: $design + px ) {
+                font-size: design(230);
+            }
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+                font-size: rem(106);
+            }
+        }
+    }
+}

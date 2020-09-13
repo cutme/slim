@@ -1,0 +1,11 @@
+.o-header {
+    h2 {
+        @extend %lead--2;
+        margin-bottom: .8em;
+    }
+    
+    p {
+        font-weight: $regular;
+    }
+}
+

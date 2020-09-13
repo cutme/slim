@@ -1,0 +1,73 @@
+.o-play {
+    @extend %flex;
+    @extend %flex-y;
+    
+    i {
+        @extend %anim;
+        @extend %rel;
+        display: block;
+        width: 120px; height: 120px;
+        background-color: $c-gray-02;
+        border-radius: 50%;
+        
+        @media ( max-width: $base + px ) {
+            width: base(120);
+            height: base(120);
+        }
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+        	width: 36.58px;
+        	height: 36.58px;
+        }
+        
+        &:after {
+            @extend %abs;
+            @extend %abs-xy;
+            @extend %abs-pseudo;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 28.445px 0 28.445px 49.27px;
+            border-color: transparent transparent transparent white;
+            margin-left: 8px;
+            
+            @media ( max-width: $base + px ) {
+                border-width: base(28.445) 0 base(28.445) base(49.27);
+                margin-left: base(8); //15.02 17.34
+            }
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+            	border-width: 8.67px 0 8.67px 15.02px;
+            }
+        }
+    }
+    
+    span {
+        @extend %anim;
+        @extend %lead--3;
+        white-space: nowrap;
+        padding-left: 30px;
+        text-transform: uppercase;
+        color: $c-gray-02;
+        
+        @media ( max-width: $base + px ) {
+            padding-left: base(30);
+        }
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	//font-size: rem(24);
+        }
+    }
+    
+    &:hover {
+        .desktop & {
+            i {
+                background-color: darken($c-gray-02, 5%);
+            }
+            
+            span {
+                color: darken($c-gray-02, 5%);
+            }
+        }
+    }
+}
