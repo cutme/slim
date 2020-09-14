@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded',function() {
         const item = obj.getElementsByClassName('js-item');
         
         const toggle = function(ev, section, op) {
-            TweenMax.to(section, 0.5, {
+            TweenMax.to(section, 0.4, {
                 height: ev,
                 opacity: op,
                 immediateRender: false,

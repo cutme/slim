@@ -148,8 +148,17 @@
                 }
             }
             
+            i, span {
+                @extend %anim;
+            }
             
-            &.is-active {}
+            &:not(.is-active) {
+                color: $c-gray-05;
+            }
+            
+            &:hover {
+                color: $c-black-01;
+            }
         }
 
         span {

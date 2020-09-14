@@ -48,7 +48,7 @@
         @extend %flex-spacebetween;
         @extend %wrap;
         padding-bottom: 60px;
-        color: $c-gray-07;
+        color: $c-gray-05;
         
         @media ( max-width: $tablet_portrait + px ) {
     	    flex-direction: column-reverse;
@@ -79,7 +79,7 @@
                 text-transform: uppercase;
                 
                 &:before, &:after {
-                    background-color: $c-gray-07;
+                    background-color: $c-gray-05;
                 }
             }
         }
