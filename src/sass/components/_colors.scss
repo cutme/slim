@@ -28,6 +28,10 @@
                 font-size: rem(24);
            }
            
+           @media ( max-width: $mini + px ) {
+           	 font-size: rem(22);
+           }
+           
            &:after {
                @extend %abs;
                @extend %abs-pseudo;

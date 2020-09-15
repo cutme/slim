@@ -45,6 +45,11 @@
                 @media ( max-width: $tablet_portrait + px ) {
                 	max-width: 300px;
                 }
+                
+                @media ( max-width: $mini + px ) {
+                    padding-right: 20px;
+                	font-size: rem(22);
+                }
             }
         }
         

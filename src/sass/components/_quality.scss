@@ -27,7 +27,7 @@
     
     &__image {
         width: 1376px;
-        
+
         canvas {
             width: 100%;
         }
@@ -44,7 +44,7 @@
         @media ( max-width: $tablet + px ) {
             width: 100%;
             padding-right: grid(70);
-            margin: 0 auto;
+            margin: 0 auto 50px auto;
             text-align: center;
         }
     }

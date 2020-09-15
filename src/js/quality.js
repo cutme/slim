@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded',function() {
 
         
         ScrollTrigger.create({
-            trigger: '.js-quality',
-            start: 'top top',
+            trigger: '.c-quality__image',
+            start: 'top center',
             scrub: true,
             pin: true,
             onUpdate: function({progress, direction, isActive}) {

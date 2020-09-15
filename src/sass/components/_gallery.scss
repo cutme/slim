@@ -43,6 +43,7 @@
         @extend %flex;
         @extend %flex-column;
         @extend %flex-spacebetween;
+        position: relative;
         width: grid(540, 1370); height: 100%;
         background-color: $c-gray-03;
         padding: 90px grid(90) 80px 140px;
@@ -134,10 +135,15 @@
 //                    width: calc(100% / 3);
                 	margin-bottom: 0;
                 }
+                
+                @media ( max-width: $smartphone + px ) {
+                	text-align: center;
+                }
             }
             
             @media ( max-width: $tablet_portrait + px ) {
                 width: 33.33%;
+                padding: 0 5px;
             }
             
             @media ( max-width: $smartphone + px ) {
@@ -171,6 +177,10 @@
             @media ( max-width: $desktop + px ) {
             	font-size: rem(18);
             }
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+            	font-size: rem(16);
+            }
         }
         
         [class^="icon-"] {
@@ -203,8 +213,12 @@
         
         @media ( max-width: $tablet + px ) {
         	position: absolute;
-        	right: 20px;
+        	right: 20px; top: 30px;
         	width: 100px;
+        }
+        
+        @media ( max-width: $smartphone + px ) {
+        	top: 20px;
         }
 
         [class^="icon-"] {

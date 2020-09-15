@@ -114,6 +114,10 @@
         @media ( max-width: $design + px ) {
         	font-size: design(65);
         }        
+        
+        @media ( max-width: $tablet + px ) {
+        	font-size: rem(24);
+        }
     }
     
     &--2 {
