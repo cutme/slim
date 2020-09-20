@@ -1,17 +1,47 @@
 @keyframes wave {
-    0% { 
-        opacity: 0.2;
-    }
-    25% {
-        opacity: 1; transform: translate3d(2%, 5%, 0) skewY(-15deg);
-    }
-    50% {
-        opacity: 1; transform: translate3d(-2%, 5%, 0) skewY(15deg);
-    }
-    100% { 
-        opacity: 0.2;
-    }
+
+	0% {
+		background-position: 0 0;
+	}
+
+	100% {
+		background-position: 0 -245px;
+	}
 }
+
+@keyframes wave-base {
+
+	0% {
+		background-position: 0 0;
+	}
+
+	100% {
+		background-position: 0 base(-245);		
+	}
+}
+
+@keyframes smoke {
+
+	0% {
+		background-position: 0 0;
+	}
+
+	100% {
+		background-position: 0 -52.6px;
+	}
+}
+
+@keyframes smoke-base {
+
+	0% {
+		background-position: 0 0;
+	}
+
+	100% {
+		background-position: 0 base(-52.6);
+	}
+}
+
 
 .c-fit {
     @extend %rel;
@@ -35,18 +65,83 @@
     	padding-bottom: 40px;
     }
     
-    
-    .air {
+    .smoke {
         @extend %abs;
         z-index: 10;
-        width: 62px; height: 151px;
-        top: 185px; left: 1085px;
-        animation: wave 4s linear infinite;
+        width: 28.52px; height: 37.1px;
+        background-image: url(../img/photos/fit/smoke.svg);
+    	background-repeat: repeat-y;
+    	background-size: 28.52px 105.2px;
+    	animation: smoke 5.1s linear infinite;
+        mask-image: url(../img/photos/fit/smoke-mask.svg);
+        mask-size: cover;
+        overflow: hidden;
         
         @media ( max-width: $base + px ) {
-        	left: base(1085);
-            top: auto; bottom: base(375);
-        	width: base(62); height: base(151);
+        	left: base(1080);
+            bottom: base(400);
+        	width: base(28.52); height: base(37.1);
+        	background-size: base(28.52) base(105.2);
+        	animation: smoke-base 8s linear infinite;
+        }
+        
+        &--1 {
+            left: 822px; bottom: 398px;
+            
+            @media ( max-width: $base + px ) {
+            	left: base(822);
+                bottom: base(398);
+            }
+            
+            @media ( max-width: $tablet + px) {
+                left: tablet(412);
+            }
+            
+            @media ( max-width: $smartphone + px ) {
+            	left: smartphone(100);
+                bottom: smartphone(232);
+            }
+        }
+        
+        &--2 {
+            left: 1386px; bottom: 296px;
+            
+            @media ( max-width: $base + px ) {
+            	left: base(1386);
+                bottom: base(296);
+            }
+            
+            @media ( max-width: $tablet + px) {
+                left: tablet(766);
+            }
+            
+            @media ( max-width: $smartphone + px ) {
+            	left: smartphone(426);
+                bottom: smartphone(172);
+            }
+        }
+    }
+
+    .wave {
+        @extend %abs;
+        z-index: 10;
+        width: 90px; height: 140px;
+        background-image: url(../img/photos/fit/wave.svg);
+    	background-repeat: repeat-y;
+    	background-size: 90px 490px;
+    	animation: wave 10s linear infinite;
+        mask-image: url(../img/photos/fit/wave-mask.svg);
+        mask-size: cover;
+        overflow: hidden;
+        bottom: 400px; left: 1080px;
+        animation: wave 10s linear infinite;
+        
+        @media ( max-width: $base + px ) {
+        	left: base(1080);
+            bottom: base(400);
+        	width: base(90); height: base(140);
+        	background-size: base(90) base(490);
+        	animation: wave-base 10s linear infinite;
         }
         
         @media ( max-width: $tablet + px) {
@@ -55,7 +150,7 @@
         
         @media ( max-width: $smartphone + px ) {
         	left: smartphone(255);
-            bottom: smartphone(240);
+            bottom: smartphone(255);
         }
     }
     
@@ -197,4 +292,10 @@
             left: smartphone(160);
         }
     }
+    
+    
+    
 }
+
+
+

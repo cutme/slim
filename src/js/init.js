@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded',function() {
         
         // Anims on inview
 
-        window.anims();
+//        window.anims();
         
         // Remove widows
        // const widow = new Widow({ elements: 'p, span', warnings: true});
