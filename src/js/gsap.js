@@ -230,7 +230,7 @@ document.addEventListener('DOMContentLoaded',function() {
                     }
                 }
             }
-        }); 
+        });
         
         gsap.from('.c-colors__image', {
             scrollTrigger: {

@@ -1,8 +1,8 @@
 import { gsap, TweenMax, Power1 } from "gsap";
-
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 document.addEventListener('DOMContentLoaded',function() {
-
+gsap.registerPlugin(ScrollTrigger);
     const el = document.getElementsByClassName('js-colors')[0];
     
     const init = function(obj) {
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded',function() {
         }
 
         cols.left.addEventListener('mouseenter', function() {
-            
+
             clearTimeout(whiteTimeOut);
 
             if (blackActive === true) {
@@ -50,7 +50,6 @@ document.addEventListener('DOMContentLoaded',function() {
             }, 500);
         });
 
-
         cols.right.addEventListener('mouseenter', function() {
 
             if (whiteActive === true) {
@@ -69,11 +68,11 @@ document.addEventListener('DOMContentLoaded',function() {
             clearTimeout(blackTimeout);
         });
         
-        
         el.addEventListener('mouseleave', function(e) {
             blackActive = false;
             whiteActive = false;
         });
+
     };
 
     el ? init() : false;

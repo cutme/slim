@@ -4,15 +4,15 @@
     
     article {
         h4 {
-            @extend %lead--2;
+            //@extend %lead--2;
             @extend %rel;
             padding: 0 0 30px 80px;
-            text-transform: uppercase;
-
+//            text-transform: uppercase;
+            font-size: rem(22);
             
             @media ( max-width: $smartphone + px ) {
                 padding-left: 60px;
-            	font-size: rem(22);
+            	//font-size: rem(22);
             }
             
             @media ( max-width: $tablet + px ) {
@@ -22,15 +22,19 @@
             @media ( max-width: $tablet_portrait + px ) {
                 padding-bottom: 25px;
                 padding-left: 60px;
-            	font-size: rem(22);
+            	//font-size: rem(22);
             }
             
             @media ( max-width: $smartphone_portrait + px ) {
                 padding-bottom: 15px;
                 padding-left: 45px;
-            	font-size: rem(18);
+            	//font-size: rem(18);
                 
             }
+        }
+        
+        p {
+            font-size: rem(14);
         }
     }
     
@@ -62,14 +66,14 @@
     }
 
     .o-accordion {
-        padding: 110px 50px 230px 190px;
+        padding: 110px 50px 230px 390px;
         counter-reset: section;
         
         @media ( max-width: $design + px ) {
-        	padding: design(110) grid(50) design(230) grid(190);
+        	padding: design(110) grid(50) design(230) grid(390);
         }
         
-        @media ( max-width: $tablet_portrait + px ) {
+        @media ( max-width: $tablet + px ) {
             padding-left: 0;
             padding-right: 0;
             padding-bottom: tablet_portrait(140);
@@ -110,11 +114,13 @@
             
             &:after {
                 bottom: 30px;
-                font-size: rem(36);
+//                font-size: rem(36);
+                font-size: rem(26);
                 
                 @media ( max-width: $base + px ) {
                     bottom: base(30);
-                	font-size: base(36);
+                	//font-size: base(36);
+                	font-size: base(26);
                 }
                 
                 @media ( max-width: $tablet + px ) {
@@ -140,7 +146,8 @@
                 @extend %flex;
                 @extend %flex-xy;
                 left: 0;
-                top: 38px;
+                top: 24px;
+                //top: 38px;
                 width: 40px; height: 40px;
                 border-radius: 50%;
                 border: 1px solid $c-black-01;
@@ -149,11 +156,13 @@
                 content: counter(section, decimal);
                 
                 @media ( max-width: $base + px ) {
-                	top: base(30);
+                	//top: base(30);
+                	top: base(24);
                 }
                 
                 @media ( max-width: $tablet + px ) {
-                    top: 15px;
+                    //top: 15px;
+                    top: 12px;
                 }
                 
                 @media ( max-width: $smartphone_portrait + px ) {

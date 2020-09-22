@@ -45,7 +45,7 @@
     
     &__copyrights {
         @extend %flex;
-        @extend %flex-spacebetween;
+//        @extend %flex-spacebetween;
         @extend %wrap;
         padding-bottom: 60px;
         color: $c-gray-05;
@@ -55,6 +55,8 @@
             align-items: center;
         }
         
+        
+        
         p {
             @extend %flex;
             align-items: flex-end;
@@ -63,16 +65,19 @@
                 weight: $regular;
             }
             
-            &:last-of-type {
+           // &:last-of-type {
                 @media ( max-width: $tablet_portrait + px ) {
                 	margin-bottom: 20px;
                 }
                 
                 @media ( max-width: $smartphone + px ) {
                     display: block;
-                	
                 }
-            }
+                
+                @media ( min-width: $smartphone + 1px ) {
+                    margin: 0 0 0 auto;
+                }
+           // }
             
             a {
                 @extend %ulink;

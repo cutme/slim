@@ -14,6 +14,11 @@
     
     ul {
         @extend %flex;
+        @extend %flex-wrap;
+        
+        @media ( max-width: $desktop + px ) {
+            justify-content: center;
+        }
         
         a {
             @extend %flex;
@@ -36,7 +41,8 @@
         
         li {
             width: calc(100% / 3);
-        	
+            margin-bottom: 30px;
+            padding-right: 20px;
         }
         
         span {
