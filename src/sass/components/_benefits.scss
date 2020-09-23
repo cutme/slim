@@ -1,3 +1,10 @@
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg);
+    }
+}
+
 .c-benefits {
     @extend %wrap;
     @extend %rel;
@@ -38,22 +45,59 @@
         }
     }
     
-    &__logo {
-        @extend %abs;
-        right: 190px; top: 0;
+    &__accordion {
+        @extend %rel;
+        margin: 110px 50px 230px 490px;
         
-        @media ( max-width: $base + px ) {
-            right: grid(190);
-        	width: grid(147.48);
+        @media ( max-width: $design + px ) {
+        	margin: design(110) grid(50) design(230) grid(490);
         }
         
         @media ( max-width: $tablet + px ) {
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: tablet_portrait(140);
+        }
+    }
+    
+    &__logo {
+        @extend %abs;
+        transform: translateX(-100%);
+        left: -40px; top: 24px;
+        
+        i {
+            @extend %abs;
+            left: 0; top: 0; z-index: 1;
+            width: 100%; height: 100%;
+            background: {
+                image: url(../img/assets/logo/4i--outside.svg);
+                size: cover;
+                position: center;
+            }
+            animation: spin 20s linear infinite;
+            
+        }
+       // left: 420px; top: 130px;
+        //right: 190px; top: 0;
+        
+        @media ( max-width: $base + px ) {
+            //left: grid(420);
+        //    right: grid(190);
+        	width: base(147.48);
+        	top: base(24);
+        }
+        
+        @media ( max-width: $tablet + px ) {
+            left: auto; top: 0;
+            right: 0;
+            transform: translate3d(0, 0, 0);
         	width: 92px;
         	height: 92px;
         }
         
         @media ( max-width: $tablet_portrait + px ) {
-            right: grid(70);
+            width: 100px;
+            //right: grid(70);
         }
         
         @media ( max-width: $smartphone + px ) {
@@ -66,18 +110,7 @@
     }
 
     .o-accordion {
-        padding: 110px 50px 230px 390px;
-        counter-reset: section;
-        
-        @media ( max-width: $design + px ) {
-        	padding: design(110) grid(50) design(230) grid(390);
-        }
-        
-        @media ( max-width: $tablet + px ) {
-            padding-left: 0;
-            padding-right: 0;
-            padding-bottom: tablet_portrait(140);
-        }
+        counter-reset: section;        
         
         li {
             padding-right: 100px;
@@ -97,19 +130,23 @@
             }
             
             &:first-child {
-                &:after {
+               /*
+ &:after {
                     opacity: 0;
                     
                     .is-rollout & {
                         opacity: 1 !important;
                     }
                 }
+*/
                 
-                h4 {
+                /*
+h4 {
                     @media ( max-width: $smartphone_portrait + px ) {
                     	padding-right: 10px;
                     }
                 }
+*/
             }
             
             &:after {
