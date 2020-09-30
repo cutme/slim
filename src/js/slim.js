@@ -6,18 +6,6 @@ document.addEventListener('DOMContentLoaded',function() {
     const el = document.getElementsByClassName('js-slim')[0];
     
     const slim = function(obj) {
-
-        const killTimeline = (timeline) => {
-            const targets = timeline.getChildren();
-            
-            timeline.kill();
-            
-            for(let i = 0; i < targets.length; i++) {
-                if(targets[i].targets().length) {
-                    gsap.set(targets[i].targets(), { clearProps: 'all' });
-                }
-            }
-        };
         
         gsap.registerPlugin(ScrollTrigger);
 
