@@ -156,6 +156,7 @@ document.addEventListener('DOMContentLoaded',function() {
 
         // slim
         
+/*
         gsap.from('.c-slim', {
             scrollTrigger: {
                 trigger: '.c-slim',
@@ -174,6 +175,7 @@ document.addEventListener('DOMContentLoaded',function() {
             },
             opacity: 0
         });
+*/
 
         
         
@@ -218,13 +220,14 @@ document.addEventListener('DOMContentLoaded',function() {
         
         
         // colors      
-        
         gsap.from('.c-colors', {
             scrollTrigger: {
                 trigger: '.c-colors',
                 start: 'top bottom',
                 onUpdate: function({progress, direction, isActive}) {
-                    if ((progress >= 0.4) && (status != true)) {
+                    console.log(progress + " " + isActive);
+                    if ((progress >= 0.9) && (status != true)) {
+                        console.log('f');
                         document.getElementsByClassName('c-colors')[0].classList.add('fade-in');
                         status = true;
                     }
@@ -239,9 +242,11 @@ document.addEventListener('DOMContentLoaded',function() {
                 start: 'top bottom',
                 end: 'top center'
             },
+            opacity: 0,
             y: 100
         });
         
+/*
         gsap.to('.c-colors', {
             scrollTrigger: {
                 trigger: '.c-colors',
@@ -250,6 +255,7 @@ document.addEventListener('DOMContentLoaded',function() {
             },
             opacity: 0
         });
+*/
         
     };
 

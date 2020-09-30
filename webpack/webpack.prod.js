@@ -76,6 +76,11 @@ module.exports = {
                 to: '../dist',
             	context: 'src'
             },
+            {
+                from: 'img/frames-slim/*.jpg',
+                to: '../dist',
+            	context: 'src'
+            },
             ],
         }),
 

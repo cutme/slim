@@ -1,11 +1,13 @@
-import { gsap, TweenMax, Power3 } from "gsap";
+import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 document.addEventListener('DOMContentLoaded',function() {
 
-    const el = document.getElementsByClassName('js-quality')[0];
     
-    const init = function(obj) {
+    
+    window.quality = function(obj) {
+        
+        const el = document.getElementsByClassName('js-quality')[0];
         
         const killTimeline = (timeline) => {
             const targets = timeline.getChildren();
@@ -57,7 +59,7 @@ document.addEventListener('DOMContentLoaded',function() {
         const anim = function() {
             if (window.innerWidth <= 1024) {
                 if (!mobile) {
-                    console.log('mobile!!');               
+
                     if (trigger) {
                         console.log('kill desktop');
                         trigger.kill();
@@ -95,8 +97,6 @@ document.addEventListener('DOMContentLoaded',function() {
                     }
                     desktop = true;
                     mobile = false;
-                    
-
     
                         console.log('start desktop');
                         gsap.set(document.querySelector('.c-quality__image'), { clearProps: 'all' });
@@ -128,6 +128,6 @@ document.addEventListener('DOMContentLoaded',function() {
         
     };
 
-    el ? init() : false;
+   // el ? init() : false;
 
 }, false);

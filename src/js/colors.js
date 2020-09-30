@@ -2,7 +2,9 @@ import { gsap, TweenMax, Power1 } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 document.addEventListener('DOMContentLoaded',function() {
-gsap.registerPlugin(ScrollTrigger);
+    
+    gsap.registerPlugin(ScrollTrigger);
+    
     const el = document.getElementsByClassName('js-colors')[0];
     
     const init = function(obj) {

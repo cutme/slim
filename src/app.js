@@ -12,6 +12,7 @@ require('./js/ismobile.js');
 require('./js/montage.js');
 require('./js/noise.js');
 require('./js/quality.js');
+require('./js/slim.js');
 //require('./js/demo.js');
 
 //require('./js/inview.js');

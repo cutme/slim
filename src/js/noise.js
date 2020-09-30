@@ -4,14 +4,12 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 document.addEventListener('DOMContentLoaded',function() {
 
     gsap.registerPlugin(ScrollTrigger);
-    
-    const el = document.getElementsByClassName('js-noise');
-    
-    const init = function() {
+        
+    window.noise = function() {
     
         const tl = gsap.timeline();
         tl.to('#circleMask', { attr: { r: 17 }})
-          .to('#image', { x: -63, y: 5, scale: 1.2 }, '-=.2')
+          .to('#image', { x: -58, y: 7, scale: 1.2 }, '-=.2')
           .from('.c-noise__details', { opacity: 0 }, '-=.2');
         
         ScrollTrigger.create({
@@ -23,9 +21,5 @@ document.addEventListener('DOMContentLoaded',function() {
             pin: true,
         });
     };
-    
-
-    el ? init() : false;
-
 
 }, false)

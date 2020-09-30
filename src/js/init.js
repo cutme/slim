@@ -1,14 +1,7 @@
 const { detect } = require('detect-browser');
 const browser = detect();
-//import Widow from 'widow-js';
 
 document.addEventListener('DOMContentLoaded',function() {
-
-/*
-    if (browser) {
-        document.documentElement.classList.add(browser.name);
-    }
-*/
 
     const cover = document.getElementById('cover');
     
@@ -25,8 +18,10 @@ document.addEventListener('DOMContentLoaded',function() {
 
         window.anims();
         
-        // Remove widows
-       // const widow = new Widow({ elements: 'p, span', warnings: true});
+        document.getElementsByClassName('js-noise')[0] ? window.noise() : false;
+        document.getElementsByClassName('js-quality')[0] ? window.quality() : false;
+        document.getElementsByClassName('js-slim')[0] ? window.slim() : false;
+
     };
     
     
