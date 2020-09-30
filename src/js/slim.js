@@ -3,9 +3,9 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 document.addEventListener('DOMContentLoaded',function() {
 
-    //const el = document.getElementsByClassName('js-slim')[0];
+    const el = document.getElementsByClassName('js-slim')[0];
     
-    window.slim = function(obj) {
+    const slim = function(obj) {
 
         const killTimeline = (timeline) => {
             const targets = timeline.getChildren();
@@ -69,6 +69,6 @@ document.addEventListener('DOMContentLoaded',function() {
         preloadImages();
     };
 
-   // el ? init() : false;
+   el ? slim() : false;
 
 }, false);

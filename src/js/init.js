@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded',function() {
         
         document.getElementsByClassName('js-noise')[0] ? window.noise() : false;
         document.getElementsByClassName('js-quality')[0] ? window.quality() : false;
-        document.getElementsByClassName('js-slim')[0] ? window.slim() : false;
+        //document.getElementsByClassName('js-slim')[0] ? window.slim() : false;
 
     };
     
