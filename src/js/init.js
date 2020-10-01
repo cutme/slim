@@ -3,14 +3,14 @@ const browser = detect();
 
 document.addEventListener('DOMContentLoaded',function() {
 
-    const cover = document.getElementById('cover');
+    const lottie = document.getElementById('lottie');
     
     const init = function() {
         document.documentElement.removeAttribute('style');
         document.documentElement.classList.add('is-loaded');
         
         setTimeout(function() {
-            cover.remove();
+            lottie.remove();
         }, 500);
 
         

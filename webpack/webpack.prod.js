@@ -81,6 +81,11 @@ module.exports = {
                 to: '../dist',
             	context: 'src'
             },
+            {
+                from: '**/*.json',
+                to: '../dist',
+            	context: 'src'
+            },
             ],
         }),
 
@@ -88,7 +93,20 @@ module.exports = {
 	
 	optimization: {
 	    minimize: true,
-	    minimizer: [new TerserPlugin()],
+	    minimizer: [
+          new TerserPlugin({
+            extractComments: true,
+            cache: true,
+            parallel: true,
+            sourceMap: true,
+            terserOptions: {
+               extractComments: 'all',
+               compress: {
+                   drop_console: true,
+               },
+        	}
+          }),
+        ],
         namedModules: true, // NamedModulesPlugin()
         noEmitOnErrors: true, // NoEmitOnErrorsPlugin
         concatenateModules: true //ModuleConcatenationPlugin
