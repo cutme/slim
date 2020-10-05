@@ -1,0 +1,7 @@
+1. W celu poprawnego odtworzenia animacji we własnym zakresie należy zmienić linijkę nr.44 w pliku : 'slim_animacja_02.html'
+`https://www.modelight.pl/wp-content/Scroll/Slim_02/${index.toString()}.jpg`;
+na własnę scieżkę np.:
+`https://www.flowair.pl/resources/Slim_02/${index.toString()}.jpg`;
+
+2.Plik źródłowy zawiera kod HTML, CSS oraz JS zawarte w jednym pliku. W zależności od zastosowanej technologii na stronie możliwe jest, że
+trzeba będzie podzielić kod na oddzielne pliki.
