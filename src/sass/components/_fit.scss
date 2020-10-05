@@ -154,8 +154,10 @@
         }
     }
     
-    images {
+    .images {
         @extend %rel;
+        
+        
     }
 
     &__image {
@@ -163,27 +165,31 @@
         margin-bottom: 60px;
         padding-top: 100px;
         overflow: hidden;
+    
+        @media ( min-width: $smartphone + 1px ) and ( max-width: $base + px ) {
+            margin-left: -100px;
+        }
         
-       // & > div {
-            @extend %rel;
+        @media ( min-width: $smartphone + 1px ) and  ( max-width: $tablet + px ) {
+        	margin-top: 50px;
+        }
 
-            .office {
-                max-width: none;
-                
-                @media ( max-width: $base + px ) {
-                	width: base(1903.55);
-                }
-                
-                @media ( max-width: $tablet + px ) {
-                	margin-left: tablet(-100);
-                }
-                
-                @media ( max-width: $smartphone + px ) {
-                    width: 200%;
-                    margin-left: smartphone(-380);
-                }
+        .office {
+            max-width: none;
+            
+            @media ( max-width: $base + px ) {
+            	width: base(1903.55);
             }
-       // }
+            
+            @media ( max-width: $tablet + px ) {
+            	margin-left: tablet(-100);
+            }
+            
+            @media ( max-width: $smartphone + px ) {
+                width: 200%;
+                margin-left: smartphone(-380);
+            }
+        }
             
         padding-right: 0;
     }
