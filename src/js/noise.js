@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded',function() {
     
         const tl = gsap.timeline();
         tl.to('#circleMask', { attr: { r: 17 }})
-          .to('#image', { x: -58, y: 7, scale: 1.2 }, '-=.2')
+          .to('#image', { x: 22, y: 14 }, '-=.2')
           .from('.c-noise__details', { opacity: 0 }, '-=.2');
         
         ScrollTrigger.create({

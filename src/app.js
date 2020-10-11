@@ -24,6 +24,8 @@ require('./js/slim.js');
 //require('./js/mobile-detach.js');
 
 
+require('./img/photos/montage/horizontal.jpg');
+require('./img/photos/montage/horizontal@2x.jpg');
 require('./img/photos/montage/join.jpg');
 require('./img/photos/montage/join@2x.jpg');
 require('./img/photos/montage/vertical.jpg');
