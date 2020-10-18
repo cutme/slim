@@ -201,10 +201,10 @@ document.addEventListener('DOMContentLoaded',function() {
                 trigger: '.c-gallery__big img',
                 scrub: 1,
                 start: 'top bottom',
-                end: 'bottom bottom'
+                end: 'top bottom'
             },
             opacity: 0,
-            y: 100
+            y: 50
         });
         
         gsap.from('.c-gallery__small img', {

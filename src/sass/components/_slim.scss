@@ -1,13 +1,29 @@
 .c-slim {
-    height: 400vh;
+    //height: 400vh;
 
     &__image {
         width: 100%;
+        height: 100vh;
+        position: relative;
+
+/*
+background: rgba(19,19,19,1);
+background: -moz-linear-gradient(top, rgba(19,19,19,1) 0%, rgba(29,29,29,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(19,19,19,1)), color-stop(100%, rgba(29,29,29,1)));
+background: -webkit-linear-gradient(top, rgba(19,19,19,1) 0%, rgba(29,29,29,1) 100%);
+background: -o-linear-gradient(top, rgba(19,19,19,1) 0%, rgba(29,29,29,1) 100%);
+background: -ms-linear-gradient(top, rgba(19,19,19,1) 0%, rgba(29,29,29,1) 100%);
+background: linear-gradient(to bottom, rgba(19,19,19,1) 0%, rgba(29,29,29,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#131313', endColorstr='#1d1d1d', GradientType=0 );
+*/
+
 
         canvas {
+            @extend %abs;
+            @extend %abs-xy;
             width: 100%;
-            max-width: 100vw;
-            max-height: 100vh;
+            //max-width: 100vw;
+            //max-height: 100vh;
         }
         
         @media ( max-width: $tablet + px ) {

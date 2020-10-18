@@ -9,6 +9,10 @@
     @extend %wrap;
     @extend %rel;
     
+    @media ( max-width: $tablet + px ) {
+        padding-top: 40px;
+    }
+    
     article {
         h4 {
             //@extend %lead--2;
@@ -77,12 +81,8 @@
             animation: spin 20s linear infinite;
             
         }
-       // left: 420px; top: 130px;
-        //right: 190px; top: 0;
         
         @media ( max-width: $base + px ) {
-            //left: grid(420);
-        //    right: grid(190);
         	width: base(147.48);
         	top: base(24);
         }
@@ -90,7 +90,7 @@
         @media ( max-width: $tablet + px ) {
             left: auto; top: 0;
             right: 0;
-            transform: translate3d(0, 0, 0);
+            transform: translate3d(0, -100%, 0);
         	width: 92px;
         	height: 92px;
         }

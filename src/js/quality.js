@@ -105,6 +105,7 @@ document.addEventListener('DOMContentLoaded',function() {
                             trigger: '.c-quality',
                             start: 'top top',
                             scrub: true,
+                            end: '+=200%',
                             pin: true,
                             onUpdate: function({progress, direction, isActive}) {
                                 const frameIndex = Math.min(frameCount - 1, Math.ceil(progress * frameCount));

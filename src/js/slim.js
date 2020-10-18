@@ -16,13 +16,14 @@ document.addEventListener('DOMContentLoaded',function() {
         const currentFrame = index => (
           `img/frames-slim/${index.toString()}.jpg`
         )
-        
+                
         const preloadImages = () => {
           for (let i = 1; i < frameCount; i++) {
             const img = new Image();
             img.src = currentFrame(i);
           }
         };
+        
         
         const img = new Image()
         img.src = currentFrame(1);
