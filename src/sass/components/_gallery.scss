@@ -148,6 +148,7 @@
             
             @media ( max-width: $smartphone + px ) {
             	flex-direction: column;
+            	text-align: center;
             	//width: 50%;
 
             	&:not(:last-child) {
@@ -158,12 +159,21 @@
                 @extend %anim;
             }
             
+            
+            span {
+                @media ( max-width: $smartphone_portrait + px ) {
+                    font-size: rem(14);
+                }
+            }
+            
             &:not(.is-active) {
                 color: $c-gray-05;
             }
             
             &:hover {
-                color: $c-black-01;
+                .desktop & {
+                    color: $c-black-01;
+                }
             }
         }
 
