@@ -2,12 +2,23 @@
     @extend %rel;
     overflow: hidden;
     
+    @media ( min-width: $tablet + 1px ) {
+    //	padding-left: 110px;
+    }
+    
     svg {
         position: relative; z-index: 5;
+        padding-left: 110px;
+        
+        @media ( max-width: $tablet + px ) {
+        	padding-left: grid(110, $tablet);
+        }
+
         @media ( max-width: $tablet + px ) {
         	min-height: 100vh;
         }
     }
+
     
     &__details {
         padding: 70px 140px 70px 140px;
@@ -41,8 +52,8 @@
         li {
             //width: 50%;
             //padding: 20px 0;
-            margin-bottom: 20px;
-            
+            margin-bottom: 10px;
+        
             @media ( min-width: $tablet + 1px ) {
                 text-align: right;
             }
@@ -129,6 +140,10 @@
         }
         
         @media ( max-width: $desktop + px ) {
+//        	max-width: 500px;
+        }
+        
+        @media ( max-width: 1220px + px ) {
         	max-width: 500px;
         }
         

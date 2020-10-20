@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded',function() {
     window.noise = function() {
     
         const tl = gsap.timeline();
-        tl.to('#circleMask', { attr: { r: 17 }})
-          .to('#image', { x: 8, y: 12 }, '-=.2')
+        tl.to('#circleMask', { attr: { r: 27 }})
+          //.to('#image', { x: 8, y: 12 }, '-=.2')
           .from('.c-noise__details', { opacity: 0 }, '-=.2');
         
         ScrollTrigger.create({
