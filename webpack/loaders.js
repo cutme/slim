@@ -105,6 +105,18 @@ const js = {
 	loader: 'happypack/loader?id=js'
 };
 
+const mp4 = {
+	test: /\.mp4$/,
+	use: [
+	    {
+		    loader: 'file-loader',
+			options: {
+			    name: '[name].[ext]',
+			    useRelativePath: true
+			}
+        }
+	]
+}
 
 
 module.exports = {
@@ -113,6 +125,7 @@ module.exports = {
     images: images,
     js: js,
     css: css,
+    mp4: mp4,
     scss: scss
 };
 

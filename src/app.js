@@ -5,6 +5,7 @@ require('./js/colors.js');
 require('./js/countup.js');
 require('./js/gallery.js');
 require('./js/gsap.js');
+require('./js/glightbox.js');
 require('./js/polyfills.js');
 require('./js/helpers.js');
 require('./js/init.js');
@@ -30,3 +31,5 @@ require('./img/photos/montage/join.jpg');
 require('./img/photos/montage/join@2x.jpg');
 require('./img/photos/montage/vertical.jpg');
 require('./img/photos/montage/vertical@2x.jpg');
+
+require('./img/video/slim-animacja-landing-v3c.mp4');
